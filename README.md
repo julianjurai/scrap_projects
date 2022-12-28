@@ -12,3 +12,5 @@ A repository for random scripts, projects, apps etc.
 ## aa_itinerary_generator
 
 A simple web app to generate itineraries for American Airlines
+Preview: 
+https://htmlpreview.github.io/?https://github.com/julianjurai/scrap_projects/blob/main/aa_itinerary_generator/index.html
