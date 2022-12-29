@@ -53,6 +53,21 @@
         max-width: 800px;
         overflow: auto;
       }
+
+      .flex {
+        display: flex;
+      }
+      .field {
+        display: flex;
+        margin: 15px;
+      }
+      .field > label {
+        min-width: 100px;
+      }
+      fieldset {
+        margin: auto;
+      }
+
       .logo {
         left: -7px;
         position: relative;
@@ -67,10 +82,11 @@
   </head>
   <body>
     <div class="bodycontainer">
-      <div class="controls hideprint">
+      <div class="controls hideprint flex">
         <fieldset>
           <legend>Generate itinerary:</legend>
-          <div class="grid">
+
+          <div class="field">
             <label for="Full Name">Full Name:</label>
             <input
               type="text"
@@ -78,7 +94,9 @@
               name="full_name"
               placeholder="Full Name"
             />
+          </div>
 
+          <div class="field">
             <label for="Record Locator">Record Locator:</label>
             <input
               type="text"
@@ -88,21 +106,27 @@
               required
               placeholder="Record Locator"
             />
+          </div>
 
+          <div class="field">
             <label for="Departure Date">Departure Date:</label>
             <input type="date" id="departure_date" name="departure_date" />
+          </div>
 
+          <div class="field">
             <label for="Return Date">Return Date:</label>
             <input type="date" id="return_date" name="return_date" />
+          </div>
 
+          <div class="field">
             <label for="trip">Trip:</label>
             <select name="trip" id="trip">
               <option value="POS-MIA">POS-MIA</option>
             </select>
-
-            <button type="button" onclick="window.print();">Print</button>
-            <button type="button" id="generate">Generate</button>
           </div>
+
+          <button type="button" id="generate">Generate</button>
+          <button type="button" onclick="window.print();">Print</button>
         </fieldset>
         <script>
           const genRandInt = (min, max) => {
